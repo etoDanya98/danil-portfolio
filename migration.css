@@ -6,3 +6,4 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}a,button{touch-action:manipul
 .img .project-name,.img .role{pointer-events:none}
 /* Replace the Webflow preview's locked root with native page scrolling. */
 html{overflow-x:hidden;overflow-y:auto}
+[class*="animation-reveal-"]{opacity:1!important;transform:none!important}
