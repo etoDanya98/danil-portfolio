@@ -9,9 +9,15 @@ html{overflow-x:hidden;overflow-y:auto}
 [class*="animation-reveal-"]{opacity:1!important;transform:none!important}
 /* Webflow cover interaction: scale the whole card down while revealing its labels. */
 @media(min-width:992px){
- .img{transform:scale(1)!important;transition:transform .5s cubic-bezier(.25,.46,.45,.94)}
- .img .project-name,.img .role{transition:opacity .3s ease}
+ .img{transform:scale(1)!important;transition:transform 1.6s cubic-bezier(.22,1,.36,1)}
+ .img .project-name,.img .role{transition:opacity 1.2s cubic-bezier(.22,1,.36,1);color:#fff;text-shadow:0 1px 12px #0006}
+ .img>.w-lightbox img{filter:brightness(1);transition:filter 1.6s cubic-bezier(.22,1,.36,1)}
+ .img:hover>.w-lightbox img,.img:focus-within>.w-lightbox img{filter:brightness(.5)}
  .img:hover,.img:focus-within{transform:scale(.95)!important}
+ .grid-6>.w-lightbox{transform:scale(1);transition:transform 1.6s cubic-bezier(.22,1,.36,1)}
+ .grid-6>.w-lightbox img{filter:brightness(1);transition:filter 1.6s cubic-bezier(.22,1,.36,1)}
+ .grid-6>.w-lightbox:hover,.grid-6>.w-lightbox:focus-visible{transform:scale(.95)}
+ .grid-6>.w-lightbox:hover img,.grid-6>.w-lightbox:focus-visible img{filter:brightness(.65)}
 }
 @media(prefers-reduced-motion:reduce){.img{transition:none!important}}
 
