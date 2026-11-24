@@ -11,16 +11,17 @@ html{overflow-x:hidden;overflow-y:auto}
 @media(min-width:992px){
  .img,.img:hover,.img:has(>.w-lightbox:focus-visible){transform:none!important}
  .img>.w-lightbox,.grid-6>.w-lightbox{position:relative;border-radius:20px;isolation:isolate}
- .img>.w-lightbox{transform:scale(1);transition:transform 2s cubic-bezier(.45,0,.55,1)!important;will-change:transform}
+ .img>.w-lightbox{transform:scale(1);transition:transform .5s cubic-bezier(.45,0,.55,1)!important;will-change:transform}
  .img:hover>.w-lightbox,.img:has(>.w-lightbox:focus-visible)>.w-lightbox{transform:scale(.95)}
- .img .project-name,.img .role{transition:opacity 2s cubic-bezier(.45,0,.55,1)!important;color:#fff;text-shadow:0 1px 12px #0006;z-index:1}
- .img>.w-lightbox::after,.grid-6>.w-lightbox::after{content:"";position:absolute;inset:0;border-radius:20px;background:#000;opacity:0;pointer-events:none;will-change:opacity;transition:opacity 2s cubic-bezier(.45,0,.55,1)!important}
+ .img .project-name,.img .role{transition:opacity .5s cubic-bezier(.45,0,.55,1)!important;color:#fff;text-shadow:0 1px 12px #0006;z-index:1}
+ .img>.w-lightbox::after,.grid-6>.w-lightbox::after{content:"";position:absolute;inset:0;border-radius:20px;background:#000;opacity:0;pointer-events:none;will-change:opacity;transition:opacity .5s cubic-bezier(.45,0,.55,1)!important}
  .img:hover>.w-lightbox::after,.img:has(>.w-lightbox:focus-visible)>.w-lightbox::after{opacity:.5}
- .img>.w-lightbox img,.grid-6>.w-lightbox img{filter:none!important}
- .grid-6>.w-lightbox img,.grid-6>.w-lightbox::after{transform:scale(1);will-change:transform;transition:transform 2s cubic-bezier(.45,0,.55,1),opacity 2s cubic-bezier(.45,0,.55,1)!important}
+ .img>.w-lightbox::after,.grid-6>.w-lightbox::after{display:none}.img>.w-lightbox img,.grid-6>.w-lightbox img{filter:brightness(1)!important;will-change:filter;transition:filter .5s cubic-bezier(.45,0,.55,1)!important}.img:hover>.w-lightbox img,.img:has(>.w-lightbox:focus-visible)>.w-lightbox img{filter:brightness(.5)!important}.grid-6>.w-lightbox:hover img,.grid-6>.w-lightbox:focus-visible img{filter:brightness(.65)!important}
+ .grid-6>.w-lightbox img,.grid-6>.w-lightbox::after{transform:scale(1);will-change:transform;transition:transform .5s cubic-bezier(.45,0,.55,1),filter .5s cubic-bezier(.45,0,.55,1)!important}
  .grid-6>.w-lightbox:hover img,.grid-6>.w-lightbox:focus-visible img,.grid-6>.w-lightbox:hover::after,.grid-6>.w-lightbox:focus-visible::after{transform:scale(.95)}
  .grid-6>.w-lightbox:hover::after,.grid-6>.w-lightbox:focus-visible::after{opacity:.35}
 }
+
 
 
 
