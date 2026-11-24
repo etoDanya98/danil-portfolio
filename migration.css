@@ -4,3 +4,5 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}a,button{touch-action:manipul
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 @media(hover:hover) and (pointer:fine){.img .project-name,.img .role{opacity:0!important}.img:hover .project-name,.img:hover .role,.img:focus-within .project-name,.img:focus-within .role{opacity:1!important}}
 .img .project-name,.img .role{pointer-events:none}
+/* Replace the Webflow preview's locked root with native page scrolling. */
+html{overflow-x:hidden;overflow-y:auto}
