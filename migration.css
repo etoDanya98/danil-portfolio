@@ -7,18 +7,19 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}a,button{touch-action:manipul
 /* Replace the Webflow preview's locked root with native page scrolling. */
 html{overflow-x:hidden;overflow-y:auto}
 [class*="animation-reveal-"]{opacity:1!important;transform:none!important}
-/* Webflow cover interaction: scale the whole card down while revealing its labels. */
+/* Keep hit areas still; animate compositor-friendly image and overlay layers. */
 @media(min-width:992px){
- .img{transform:scale(1)!important;transition:transform 1.6s cubic-bezier(.22,1,.36,1)}
- .img .project-name,.img .role{transition:opacity 1.2s cubic-bezier(.22,1,.36,1);color:#fff;text-shadow:0 1px 12px #0006}
- .img>.w-lightbox img{filter:brightness(1);transition:filter 1.6s cubic-bezier(.22,1,.36,1)}
- .img:hover>.w-lightbox img,.img:focus-within>.w-lightbox img{filter:brightness(.5)}
- .img:hover,.img:focus-within{transform:scale(.95)!important}
- .grid-6>.w-lightbox{transform:scale(1);transition:transform 1.6s cubic-bezier(.22,1,.36,1)}
- .grid-6>.w-lightbox img{filter:brightness(1);transition:filter 1.6s cubic-bezier(.22,1,.36,1)}
- .grid-6>.w-lightbox:hover,.grid-6>.w-lightbox:focus-visible{transform:scale(.95)}
- .grid-6>.w-lightbox:hover img,.grid-6>.w-lightbox:focus-visible img{filter:brightness(.65)}
+ .img,.img:hover,.img:focus-within{transform:none!important}
+ .img>.w-lightbox,.grid-6>.w-lightbox{position:relative;border-radius:20px;isolation:isolate}
+ .img>.w-lightbox{transform:scale(1);transition:transform 2s cubic-bezier(.45,0,.55,1)!important;will-change:transform}
+ .img:hover>.w-lightbox,.img:focus-within>.w-lightbox{transform:scale(.95)}
+ .img .project-name,.img .role{transition:opacity 2s cubic-bezier(.45,0,.55,1)!important;color:#fff;text-shadow:0 1px 12px #0006;z-index:1}
+ .img>.w-lightbox::after,.grid-6>.w-lightbox::after{content:"";position:absolute;inset:0;border-radius:20px;background:#000;opacity:0;pointer-events:none;will-change:opacity;transition:opacity 2s cubic-bezier(.45,0,.55,1)!important}
+ .img:hover>.w-lightbox::after,.img:focus-within>.w-lightbox::after{opacity:.5}
+ .img>.w-lightbox img,.grid-6>.w-lightbox img{filter:none!important}
+ .grid-6>.w-lightbox img,.grid-6>.w-lightbox::after{transform:scale(1);will-change:transform;transition:transform 2s cubic-bezier(.45,0,.55,1),opacity 2s cubic-bezier(.45,0,.55,1)!important}
+ .grid-6>.w-lightbox:hover img,.grid-6>.w-lightbox:focus-visible img,.grid-6>.w-lightbox:hover::after,.grid-6>.w-lightbox:focus-visible::after{transform:scale(.95)}
+ .grid-6>.w-lightbox:hover::after,.grid-6>.w-lightbox:focus-visible::after{opacity:.35}
 }
-@media(prefers-reduced-motion:reduce){.img{transition:none!important}}
 
 
