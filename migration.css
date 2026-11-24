@@ -25,3 +25,5 @@ html{overflow-x:hidden;overflow-y:auto}
 
 
 
+@media(min-width:992px){.navigation .menu-nav{justify-content:flex-end}.navigation .menu-links-wrapper{position:fixed;top:24px;left:50%;transform:translateX(-50%);width:max-content}}
+

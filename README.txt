@@ -14,7 +14,7 @@ external embeds, as in the original site, and require internet access and
 the original video's embedding permissions. They start on visitor action.
 
 Webflow forms were replaced with a mailto button, at the owner's request:
-danil.aksenov@yahoo.com
+danil.aksenov.personal@gmail.com
 
 Gallery navigation, keyboard shortcuts, swipe and mobile navigation
 are implemented in site.js. Original Webflow visual styles are kept in
@@ -23,3 +23,4 @@ overlay and page transitions have been simplified for static hosting.
 Original design credit and portfolio text are preserved.
 
 Preview links, editor scripts, payment scripts and forms are not included.
+
