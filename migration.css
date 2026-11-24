@@ -3,3 +3,4 @@ html{scroll-behavior:smooth}body{overflow-x:hidden}a,button{touch-action:manipul
 @media(max-width:991px){.w-nav-menu.static-open{display:block!important;position:absolute!important;inset:78px 0 auto!important;background:#f5f5f5;padding:24px!important;z-index:1000;height:auto!important;max-height:75dvh;overflow:auto}.w-nav-menu.static-open .nav-link{display:block}.lightbox-stage{padding:8px}.lightbox-top{padding:10px 16px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
 @media(hover:hover) and (pointer:fine){.img .project-name,.img .role{opacity:0!important}.img:hover .project-name,.img:hover .role,.img:focus-within .project-name,.img:focus-within .role{opacity:1!important}}
+.img .project-name,.img .role{pointer-events:none}
