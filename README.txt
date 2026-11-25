@@ -27,3 +27,4 @@ Preview links, editor scripts, payment scripts and forms are not included.
 Research includes research-motion-01.mp4 (1024 x 768), played on click using the browser video player.
 
 
+Research also includes three looping GIF studies: research-shot-02.gif, research-shot-03.gif, research-shot-04.gif (640 x 480, 12 fps).
