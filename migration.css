@@ -31,3 +31,8 @@ html{overflow-x:hidden;overflow-y:auto}
 
 .research-video-card{position:relative;display:block;overflow:hidden;border-radius:20px}.research-video-card>video{display:block;width:100%;height:auto;pointer-events:none}.research-play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:grid;place-items:center;width:56px;height:56px;border:1px solid #ffffff99;border-radius:50%;background:#1118;color:#fff;font-size:20px;pointer-events:none}.lightbox-stage>video{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}@media(min-width:768px){.lightbox-stage>video{max-width:60vw}}@media(min-width:992px){.grid-6>.w-lightbox>video{transform:scale(1);filter:brightness(1);transition:transform .5s cubic-bezier(.45,0,.55,1),filter .5s cubic-bezier(.45,0,.55,1)!important}.grid-6>.w-lightbox:hover>video,.grid-6>.w-lightbox:focus-visible>video{transform:scale(.95);filter:brightness(.65)}}
 .grid-6{gap:16px!important;align-items:start}.grid-6>.w-lightbox{display:block;width:100%;height:auto;margin:0}.grid-6>.w-lightbox>img{display:block;width:100%;height:auto}
+
+/* Fill each portfolio column even when a cover has a smaller intrinsic width. */
+.columns > .w-col{grid-template-columns:minmax(0,1fr)}
+.columns > .w-col > .img > .w-lightbox{width:100%;min-width:0}
+.columns > .w-col > .img > .w-lightbox > img{display:block;width:100%;height:auto}
