@@ -24,5 +24,6 @@ Original design credit and portfolio text are preserved.
 
 Preview links, editor scripts, payment scripts and forms are not included.
 
-Research includes a looping animation: research-motion-01.gif (1024 x 768).
+Research includes research-motion-01.mp4 (1024 x 768), played on click using the browser video player.
+
 
