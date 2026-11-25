@@ -24,3 +24,4 @@ Original design credit and portfolio text are preserved.
 
 Preview links, editor scripts, payment scripts and forms are not included.
 
+Research also includes research-motion-01.mp4, played locally using the browser video player.
