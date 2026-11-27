@@ -1,3 +1,14 @@
+/* Keep legacy page links and bookmarks on the public clean URLs. */
+(()=>{
+ const url=new URL(window.location.href);
+ const names=['home','research','about','onomy','showreel','viral','encounter','grain','invisible-ai','armanino'];
+ let name=url.pathname.split('/').pop().replace(/\.html$/,'');
+ if(!name||name==='index')name='home';else if(name==='galley')name='research';
+ if(!names.includes(name))return;
+ const folder=url.pathname.slice(0,url.pathname.lastIndexOf('/')+1);
+ const target=folder+name;url.searchParams.delete('v');
+ if(url.pathname!==target||url.search!==window.location.search){url.pathname=target;window.history.replaceState(window.history.state,'',url.pathname+url.search+url.hash);}
+})();
 /* Gallery and navigation work independently of Webflow hosting. */
 (()=>{
 const dialog=document.createElement('dialog');dialog.className='portfolio-lightbox';dialog.setAttribute('aria-label','Project gallery');dialog.innerHTML='<div class="lightbox-top"><span class="lightbox-title"></span><button class="lightbox-close" aria-label="Close gallery">×</button></div><div class="lightbox-stage"></div><div class="lightbox-controls"><button class="lightbox-prev" aria-label="Previous image">←</button><span class="lightbox-count"></span><button class="lightbox-next" aria-label="Next image">→</button></div>';document.body.append(dialog);
